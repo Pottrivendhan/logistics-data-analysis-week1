@@ -1,5 +1,6 @@
 data/*.csv
 cleaned_logistics_data.csv
+week2_*.csv
 *.zip
 __pycache__/
 *.pyc
