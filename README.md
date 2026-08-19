@@ -1,114 +1,204 @@
-\# Logistics Data Analysis - Week 1
+# 🚚 Logistics Data Analysis – Week 1 to Week 4
 
+A complete Python-based logistics analytics project covering **strategic planning, data preprocessing, exploratory data analysis, predictive modeling, and logistics optimization**.
 
+---
 
-\## Project Overview
+## 📌 Project Overview
 
+This project demonstrates an end-to-end data science workflow for analyzing logistics and e-commerce delivery operations.
 
+The project is divided into four progressive stages:
 
-This project analyzes e-commerce logistics data to understand delivery
+| Week | Focus | Main Outcome |
+|------|-------|--------------|
+| **Week 1** | Strategic Planning & Data Exploration | Logistics KPIs and business insights |
+| **Week 2** | Data Cleaning & Preprocessing | Clean and analysis-ready datasets |
+| **Week 3** | Advanced EDA & Visualization | 12 logistics performance visualizations |
+| **Week 4** | Predictive Modeling & Optimization | Delivery-time prediction and risk prioritization |
 
-performance, identify high-risk sellers and regions, and explore
+The project uses the **Olist Brazilian E-Commerce dataset** and Python data science technologies.
 
-machine-learning approaches for late-delivery prediction.
+---
 
+# 🎯 Project Objectives
 
+The main objectives are to:
 
-\## Dataset
+- Analyze logistics delivery performance.
+- Calculate important logistics KPIs.
+- Identify delivery delays and high-risk regions.
+- Clean and preprocess logistics datasets.
+- Explore trends and relationships using visualization.
+- Build predictive models for delivery-time forecasting.
+- Compare machine learning models.
+- Tune the best-performing model.
+- Classify shipments according to predicted delivery risk.
+- Develop an optimization strategy for logistics operations.
+- Support data-driven logistics decision-making.
 
+---
 
+# 🛠️ Technologies Used
 
-Brazilian E-Commerce Public Dataset by Olist.
+- **Python 3.12**
+- **Pandas**
+- **NumPy**
+- **Matplotlib**
+- **Scikit-learn**
+- **Jupyter / Python scripts**
+- **Git**
+- **GitHub**
 
+---
 
+# 📂 Dataset
 
-The original CSV dataset is not included in this repository because of
+The project uses the **Olist Brazilian E-Commerce dataset**.
 
-its size. Download the dataset separately and place the CSV files inside
+Major datasets include:
 
-the `data` folder.
+- Orders
+- Order Items
+- Customers
+- Sellers
+- Products
 
+Important attributes include:
 
+- Order ID
+- Customer ID
+- Order Status
+- Purchase Timestamp
+- Delivery Timestamp
+- Estimated Delivery Date
+- Product Price
+- Freight Value
+- Seller ID
+- Product ID
+- Customer State
+- Product Weight
+- Product Dimensions
 
-\## Technologies
+The original datasets are excluded from GitHub using `.gitignore` to avoid unnecessarily large repository files.
 
+---
 
+# 📅 Week 1 – Strategic Planning and Data Exploration
 
-\- Python
+## Objective
 
-\- Pandas
+The first week focused on defining the logistics problem, identifying KPIs, exploring the dataset, and establishing a strategic analytical roadmap.
 
-\- Matplotlib
+## Activities
 
-\- Scikit-learn
+- Loaded the logistics dataset.
+- Examined dataset structure.
+- Identified missing values.
+- Calculated logistics KPIs.
+- Analyzed delivery performance.
+- Examined seller performance.
+- Analyzed state-level delivery performance.
+- Investigated freight costs.
+- Performed seller clustering.
 
-\- Random Forest
+## Key KPIs
 
-\- K-Means Clustering
+| KPI | Result |
+|---|---:|
+| Total Orders | 99,441 |
+| Delivered Orders | 96,476 |
+| Average Delivery Time | 12.56 days |
+| Late Delivery Rate | 8.11% |
+| On-Time Delivery Rate | 91.89% |
+| Average Freight Cost | 22.82 |
 
+## Machine Learning
 
+A classification model was developed to identify delivery outcomes.
 
-\## Key Results
+Model accuracy:
 
+**91.42%**
 
+The analysis also used **K-Means clustering** to segment sellers based on operational behavior.
 
-\- Total Orders: 99,441
+### Seller Clusters
 
-\- Delivered Orders: 96,476
+| Cluster | Sellers | Avg Orders | Avg Delivery Days | Avg Late Rate |
+|---|---:|---:|---:|---:|
+| 0 | 939 | 51.31 | 16.10 | 14.58% |
+| 1 | 91 | 2.16 | 33.54 | 82.77% |
+| 2 | 1,921 | 15.06 | 9.30 | 1.89% |
+| 3 | 19 | 1,078.84 | 13.04 | 8.32% |
 
-\- Average Delivery Time: 12.56 days
+---
 
-\- On-Time Delivery Rate: 91.89%
+# 📅 Week 2 – Data Collection, Cleaning and Preprocessing
 
-\- Late Delivery Rate: 8.11%
+## Objective
 
-\- Random Forest Accuracy: 91.42%
+Week 2 focused on preparing high-quality data for analysis and machine learning.
 
-\- Late Delivery Recall: 5%
+## Data Quality Analysis
 
+The preprocessing pipeline examined:
 
+- Data types
+- Missing values
+- Duplicate records
+- Unique values
+- Numerical distributions
+- Product characteristics
+- Outliers
 
-\## Analysis Performed
+### Missing Values
 
+Important missing values were identified in:
 
+- `order_approved_at`
+- `order_delivered_carrier_date`
+- `order_delivered_customer_date`
 
-1\. Data loading and validation
+Missing percentages were calculated to understand their impact.
 
-2\. Data cleaning
+## Duplicate Analysis
 
-3\. Logistics KPI calculation
+The dataset was checked for:
 
-4\. Monthly delivery analysis
+- Duplicate orders
+- Duplicate order IDs
 
-5\. Seller performance analysis
+No duplicate order IDs were identified in the analysis.
 
-6\. Regional analysis
+## Numerical Analysis
 
-7\. Product and freight analysis
+Important variables analyzed included:
 
-8\. Late-delivery prediction
+- Product price
+- Freight value
+- Product weight
+- Product length
+- Product height
+- Product width
 
-9\. Seller clustering
+## Preprocessing Techniques
 
-10\. Strategic recommendations
-
-
-
-\## Project Structure
-
-
+The project applied:
 
 ```text
-
-logistics-data-analysis-week1/
-
-│
-
-├── logistics\_analysis.py
-
-├── README.md
-
-├── .gitignore
-
-└── data/
-
+Data Collection
+      ↓
+Data Inspection
+      ↓
+Missing Value Analysis
+      ↓
+Duplicate Detection
+      ↓
+Outlier Analysis
+      ↓
+Data Transformation
+      ↓
+Normalization / Preparation
+      ↓
+Clean Dataset
