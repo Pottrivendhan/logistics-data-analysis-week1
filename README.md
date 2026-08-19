@@ -354,7 +354,7 @@ Examines how product weight relates to freight cost.
 Identifies high-risk geographical regions.
 
 8. High-Risk Sellers
-
+ 
 Highlights sellers with poor delivery performance.
 
 9. Correlation Heatmap
